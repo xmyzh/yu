@@ -13,6 +13,7 @@ void main()
 
 
 
+	for (i=0; i < 5; i++)
 	{
 		ptr1[i] = (char *)malloc(20);
 		printf("请为字符形指针数组【%d】赋初值， \n", i);
