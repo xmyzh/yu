@@ -14,7 +14,7 @@ int main()
 	//逐行输入字符串
 	for(t=0; t<MAX; t++)
 	{
-		printf("%d: ", t);
+		printf("line %d: ", t);
 		gets(text[t]);
 		if (!text[t][0]) {
 			break;
@@ -24,10 +24,18 @@ int main()
 	//按行逐个输出字符串
 	for(i=0; i<t; i++)
 	{
-		for (j=0; text[i][j]; j++)
-			putchar(text[i][j]);//输出函数
+		for (j=0; text[i][j]; j++) {
+			if(text[i][j]=='\\')
+				putchar('/');
+			else if(text[i][j]=='/')
+				putchar('\\');
+			else
+				putchar(text[i][j]);//输出函数
+		}
 		putchar('\n');
 	}
+	printf("wait a key to exit\n");
+	getchar();
 }
 
 /*
