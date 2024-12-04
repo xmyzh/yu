@@ -24,11 +24,11 @@ void main()
 	printf("I2 = %.10f \n", Result2);
 }
 
-double SIMP1(a,b,n)
+double SIMP1(double a,
+	double b,
+	int n)
 {
-	double a;
-	double b;
-	int n;
+	
 	
 	int i;
 	double h, s;
@@ -39,11 +39,11 @@ double SIMP1(a,b,n)
 	return (b-a)*s/(3*n);
 }
 
-double SIMP2(a, b, eps)
+double SIMP2(	double a,
+	double b,
+	double eps)
 {
-	double a;
-	double b;
-	double eps;
+
 	
 	int k, n;
 	double h, t1, t2, s1, s2, p, x;
